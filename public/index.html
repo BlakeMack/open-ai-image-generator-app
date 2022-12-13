@@ -14,13 +14,13 @@
   <header>
     <div class="navbar">
       <div class="logo">
-        <h2>OpenAI Image Genrator</h2>
+        <h2>OpenAI Image Generator</h2>
       </div>
       <div class="nav-links">
         <ul>
           <li>
-            <a href="https://beta.openai.com/docs" target="_blank"
-              >OpenAI API Docs</a
+            <a class="openai-text" href="https://beta.openai.com/docs" target="_blank"
+              ></a
             >
           </li>
         </ul>
@@ -31,14 +31,13 @@
   <main>
     <section class="showcase">
       <form id="image-form">
-        <h1>Describe An Image</h1>
+        <h1 class="describe"></h1>
         <div id="typed-strings">
-          <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-          <p>It <em>types</em> out sentences.</p>
+          <h1>Describe an Image</h1>
         </div>
         <span id="typed"></span>
         <div class="form-control">
-          <input type="text" id="prompt" placeholder="Enter Text" />
+          <input type="text" id="prompt" placeholder="Example: Lions running through a field" />
         </div>
         <!-- size -->
         <div class="form-control">
@@ -62,9 +61,19 @@
 
   <div class="spinner"></div>
   <script>
-    var typed = new Typed('#typed', {
-      stringsElement: '#typed-strings'
+    var typed = new Typed('.describe', {
+      stringsElement: '#typed-strings',
+      typeSpeed: 80,
+      showCursor: false,
+      startDelay: 40
     });
+    var options = {
+        strings: ['OpenAI API Docs'],
+        typeSpeed: 200,
+        showCursor: false,
+        loop: true
+      };
+    var docsTyped = new Typed('.openai-text', options);
   </script>
 </body>
 </html>
