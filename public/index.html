@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/spinner.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="js/main.js" defer></script>
   <title>Open AI Image Generator</title>
 </head>
@@ -31,6 +32,11 @@
     <section class="showcase">
       <form id="image-form">
         <h1>Describe An Image</h1>
+        <div id="typed-strings">
+          <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+          <p>It <em>types</em> out sentences.</p>
+        </div>
+        <span id="typed"></span>
         <div class="form-control">
           <input type="text" id="prompt" placeholder="Enter Text" />
         </div>
@@ -55,5 +61,10 @@
   </main>
 
   <div class="spinner"></div>
+  <script>
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings'
+    });
+  </script>
 </body>
 </html>

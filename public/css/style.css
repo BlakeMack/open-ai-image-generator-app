@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: #f9b64d;
+  --primary-color: #E4E6C3;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background: #f4f4f4;
+  background: #F7F7F2;
 }
 
 /* Navbar */
